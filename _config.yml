@@ -3,5 +3,5 @@ plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
 
 title: Gen AI using Spring Boot
-description: LLM inferencing using Spring Boot, Langgraph, OpenAI & Angular for scalable Gen AI applications. Advanced self reflective memory RAG applications using langchain, langgraph, Mistral, Lama and Open AI. Solution containerization using Docker & Azure Cloud. Gen AI applications to automate aspect-based classification and summarization using prompt engineering and LLM’s. 
+description: LLM inferencing using Spring Boot & Headless architecture with Angular for the chat interface addresses both scalability and performance challenges of Self Reflective Agentic Gen AI applications.  
 show_downloads: false
