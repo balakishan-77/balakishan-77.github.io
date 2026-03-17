@@ -223,17 +223,17 @@ hide_sidebar: true
 
 		<div class="project-right">
 			<p>
-				The <strong>Presentation layer</strong> is based Angular
+				The <strong>Presentation layer</strong> uses Angular framework
 				to capture user input and render responses while connecting to Spring Boot based Backend REST API layer. 
-
-                The <strong>RAG engine layer</strong> combines HyPE technique, React agent, Open API to coordinate retrieval and answer generation workflows.                              
-
 			</p>
+			<p>            
+                The <strong>RAG engine layer</strong> combines Prompt Engineering, RAG, HyPE technique, React agent, Open API, and LangGraph which coordinates retrieval and answer generation workflows.                  
+            </p>
 
-			<h3>RAG Tool</h3>
+			<h3>RAG Flow</h3>
 			<ul>
 				<li>
-					Generates hypothetical questions based on HyPE technique from the user query and retrieves <strong>context</strong> from the <strong>vector store</strong>.
+					For the user query, generates hypothetical questions based on HyPE technique. Uses these questions to identify relevant <strong>context</strong> from the <strong>vector store</strong>.
 				</li>
 				<li>
 					Sends the user query, retrieved context to the <strong>LLM</strong> for response generation.
@@ -243,7 +243,6 @@ hide_sidebar: true
 				</li>
 			</ul>   
 
-
 			<div class="arch-diagram arch-diagram-compact">
 				<div class="arch-layer">Angular</div>
 				<div class="arch-layer">Spring Boot</div>
@@ -252,7 +251,7 @@ hide_sidebar: true
 			</div>
 		
             <p>
-                LamaParse has been used as part of chunking strategy to generated semantic chunks and ingest the resulting embeddings into  Chroma DB. LLM has been used to generate HyPE questions.
+                LamaParse has been used as part of chunking strategy to generated semantic chunks and ingest the resulting embeddings into  Chroma DB. LLM is used to generate HyPE questions.
             </p>
         </div>
         
