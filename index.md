@@ -97,16 +97,24 @@ hide_sidebar: true
 		margin-bottom: 0.9rem;
 	}
 
-	.arch-row {
+	.arch-layer {
 		display: grid;
-		grid-template-columns: 1fr auto 1fr;
+		grid-template-columns: 130px 1fr;
+		gap: 0.55rem;
 		align-items: center;
-		gap: 0.5rem;
-		margin-bottom: 0.45rem;
+		margin-bottom: 0.5rem;
 	}
 
-	.arch-row:last-child {
+	.arch-layer:last-child {
 		margin-bottom: 0;
+	}
+
+	.arch-label {
+		font-size: 0.79rem;
+		font-weight: 700;
+		color: #315974;
+		text-transform: uppercase;
+		letter-spacing: 0.03em;
 	}
 
 	.arch-node {
@@ -120,10 +128,27 @@ hide_sidebar: true
 		text-align: center;
 	}
 
-	.arch-arrow {
-		font-size: 0.88rem;
-		color: #507694;
-		font-weight: 700;
+	.arch-node-main {
+		background: #edf6ff;
+	}
+
+	.arch-node-sub {
+		margin-top: 0.32rem;
+		font-size: 0.83rem;
+		font-weight: 600;
+		color: #315974;
+		text-align: center;
+	}
+
+	@media (max-width: 1100px) {
+		.arch-layer {
+			grid-template-columns: 1fr;
+			gap: 0.3rem;
+		}
+
+		.arch-label {
+			font-size: 0.75rem;
+		}
 	}
 
 	.project-right ul {
@@ -136,6 +161,20 @@ hide_sidebar: true
 		display: flex;
 		flex-wrap: wrap;
 		gap: 0.8rem;
+	}
+
+	.project-shot {
+		margin-top: 0.75rem;
+		margin-bottom: 0.9rem;
+	}
+
+	.project-shot img {
+		width: 100%;
+		max-width: 460px;
+		height: auto;
+		border: 1px solid #c9dced;
+		border-radius: 8px;
+		box-shadow: 0 2px 8px rgba(18, 44, 68, 0.12);
 	}
 
 	@media (max-width: 900px) {
@@ -182,6 +221,10 @@ hide_sidebar: true
 				<strong>RAG</strong> tool for generating accurate <strong>content</strong>.
 			</p>
 
+			<div class="project-shot">
+				<img src="{{ '/assets/img/neutrino-chatbot-screenshot.png' | relative_url }}" alt="Neutrino chatbot screenshot" onerror="this.style.display='none'" />
+			</div>
+
 			<div class="project-links">
 				<a href="http://52.140.124.205:4200/home">SpringBoot Solution</a>
 			</div>
@@ -190,30 +233,26 @@ hide_sidebar: true
 		<div class="project-right">
 			<h3>Architecture</h3>
 			<div class="arch-diagram">
-				<div class="arch-row">
-					<div class="arch-node">Angular</div>
-					<div class="arch-arrow">--&gt;</div>
-					<div class="arch-node">SpringBoot API</div>
+				<div class="arch-layer">
+					<div class="arch-label">Layer 1: UI</div>
+					<div class="arch-node arch-node-main">Angular</div>
 				</div>
-				<div class="arch-row">
-					<div class="arch-node">SpringBoot API</div>
-					<div class="arch-arrow">--&gt;</div>
-					<div class="arch-node">HyPE</div>
+				<div class="arch-layer">
+					<div class="arch-label">Layer 2: REST API</div>
+					<div class="arch-node arch-node-main">Spring Boot</div>
 				</div>
-				<div class="arch-row">
-					<div class="arch-node">HyPE</div>
-					<div class="arch-arrow">--&gt;</div>
-					<div class="arch-node">RAG Engine</div>
+				<div class="arch-layer">
+					<div class="arch-label">Layer 3: RAG Engine</div>
+					<div>
+						<div class="arch-node arch-node-main">LangGraph Orchestration</div>
+						<div class="arch-node-sub">HyPE</div>
+						<div class="arch-node-sub">Open API</div>
+						<div class="arch-node-sub">React Agent</div>
+					</div>
 				</div>
-				<div class="arch-row">
-					<div class="arch-node">LangGraph Orchestration</div>
-					<div class="arch-arrow">--&gt;</div>
-					<div class="arch-node">RAG Engine</div>
-				</div>
-				<div class="arch-row">
-					<div class="arch-node">RAG Engine</div>
-					<div class="arch-arrow">--&gt;</div>
-					<div class="arch-node">Vector DB</div>
+				<div class="arch-layer">
+					<div class="arch-label">Layer 4: Vector DB</div>
+					<div class="arch-node arch-node-main">Chroma DB</div>
 				</div>
 			</div>
 
