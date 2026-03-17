@@ -219,13 +219,6 @@ hide_sidebar: true
 			<div class="project-links">
 				<a href="http://52.140.124.205:4200/home" target="_blank" rel="noopener noreferrer">SpringBoot Solution</a>
 			</div>
-
-			<div class="arch-diagram arch-diagram-compact">
-				<div class="arch-layer">Angular</div>
-				<div class="arch-layer">Spring Boot</div>
-				<div class="arch-layer">RAG - LangGraph&nbsp;·&nbsp;HyPE &nbsp;·&nbsp; Open API &nbsp;·&nbsp; React</div>
-				<div class="arch-layer">Vector Database - Chroma DB</div>
-			</div>
 		</div>
 
 		<div class="project-right">
@@ -249,10 +242,20 @@ hide_sidebar: true
 					Calculates groundedness and precision <strong>scores</strong> of the response. Repeats the process up to a predefined <strong>max</strong> iteration count when scores are low.
 				</li>
 			</ul>   
+
+
+			<div class="arch-diagram arch-diagram-compact">
+				<div class="arch-layer">Angular</div>
+				<div class="arch-layer">Spring Boot</div>
+				<div class="arch-layer">RAG - LangGraph&nbsp;·&nbsp;HyPE &nbsp;·&nbsp; Open API &nbsp;·&nbsp; React</div>
+				<div class="arch-layer">Vector Database - Chroma DB</div>
+			</div>
+		
             <p>
                 LamaParse has been used as part of chunking strategy to generated semantic chunks and ingest the resulting embeddings into  Chroma DB. LLM has been used to generate HyPE questions.
             </p>
-		</div>
+        </div>
+        
 	</article>
 
 	<article class="project-row project-row-architecture-right">
