@@ -177,6 +177,18 @@ hide_sidebar: true
 		box-shadow: 0 2px 8px rgba(18, 44, 68, 0.12);
 	}
 
+	.project-row-reversed {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.project-row-reversed .project-left {
+		order: 1;
+	}
+
+	.project-row-reversed .project-right {
+		order: 0;
+	}
+
 	@media (max-width: 900px) {
 		body {
 			padding: 16px;
@@ -285,6 +297,59 @@ hide_sidebar: true
 				and answer generation workflows. The <strong>Vector DB layer</strong> uses Chroma DB to store
 				and retrieve semantic context for grounding responses.
 			</p>
+		</div>
+	</article>
+
+	<article class="project-row project-row-reversed">
+		<div class="project-left">
+			<h3>Architecture</h3>
+			<div class="arch-diagram">
+				<div class="arch-layer">
+					<div class="arch-label">Layer 1: UI</div>
+					<div class="arch-node arch-node-main">React / Web Chat</div>
+				</div>
+				<div class="arch-layer">
+					<div class="arch-label">Layer 2: NLU</div>
+					<div class="arch-node arch-node-main">RASA NLU</div>
+				</div>
+				<div class="arch-layer">
+					<div class="arch-label">Layer 3: Dialogue</div>
+					<div>
+						<div class="arch-node arch-node-main">RASA Core</div>
+						<div class="arch-node-sub">OTP Auth</div>
+						<div class="arch-node-sub">Session Management</div>
+					</div>
+				</div>
+				<div class="arch-layer">
+					<div class="arch-label">Layer 4: Backend</div>
+					<div>
+						<div class="arch-node arch-node-main">Custom Actions API</div>
+						<div class="arch-node-sub">Appointment DB</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="project-shot" style="margin-top:0.9rem;">
+				<img src="{{ '/assets/img/appointment-bot-screenshot.png' | relative_url }}" alt="Appointment Bot screenshot" onerror="this.style.display='none'" />
+			</div>
+		</div>
+
+		<div class="project-right">
+			<h2 style="margin-top:0;">RASA Appointment Bot</h2>
+			<p>
+				A conversational appointment management assistant built with <strong>RASA</strong>. Users
+				can authenticate via <strong>OTP</strong>, view their profile, browse available doctors,
+				and book, view, or cancel appointments — all through a natural language interface.
+			</p>
+
+			<h3>Key Features</h3>
+			<ul>
+				<li>OTP-based email authentication with session management.</li>
+				<li>Books appointments with available doctors by specialty.</li>
+				<li>View and cancel existing appointments.</li>
+				<li>Quick command shortcuts for common actions.</li>
+				<li>Persistent session context across the conversation.</li>
+			</ul>
 		</div>
 	</article>
 </section>
