@@ -281,7 +281,7 @@ hide_sidebar: true
 		</div>
 
 		<div class="project-right">
-			<h4>Key Features</h4>
+			<b>Key Features</b>
 			<ul>
 				<li>OTP-based email authentication with session management.</li>
 				<li>Configurable dialog flows that guide user conversations.</li>
@@ -290,7 +290,7 @@ hide_sidebar: true
 				<li>Persistent session context across the conversation.</li>
 			</ul>
 
-			<h4>Architecture Overview</h4>
+			<b>Architecture Overview</b>
 			<div class="arch-diagram arch-diagram-compact">
 				<div class="arch-layer">StreamLit</div>
 				<div class="arch-layer">RASA Server</div>
