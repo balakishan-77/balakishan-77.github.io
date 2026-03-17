@@ -89,6 +89,43 @@ hide_sidebar: true
 		font-size: 1.1rem;
 	}
 
+	.arch-diagram {
+		border: 1px solid #d3e3f1;
+		border-radius: 8px;
+		padding: 0.65rem;
+		background: #f9fcff;
+		margin-bottom: 0.9rem;
+	}
+
+	.arch-row {
+		display: grid;
+		grid-template-columns: 1fr auto 1fr;
+		align-items: center;
+		gap: 0.5rem;
+		margin-bottom: 0.45rem;
+	}
+
+	.arch-row:last-child {
+		margin-bottom: 0;
+	}
+
+	.arch-node {
+		padding: 0.32rem 0.48rem;
+		border: 1px solid #b9d2e7;
+		border-radius: 6px;
+		background: #ffffff;
+		color: #16334b;
+		font-size: 0.9rem;
+		font-weight: 600;
+		text-align: center;
+	}
+
+	.arch-arrow {
+		font-size: 0.88rem;
+		color: #507694;
+		font-weight: 700;
+	}
+
 	.project-right ul {
 		margin: 0;
 		padding-left: 1.1rem;
@@ -151,6 +188,35 @@ hide_sidebar: true
 		</div>
 
 		<div class="project-right">
+			<h3>Architecture</h3>
+			<div class="arch-diagram">
+				<div class="arch-row">
+					<div class="arch-node">Angular</div>
+					<div class="arch-arrow">--&gt;</div>
+					<div class="arch-node">SpringBoot API</div>
+				</div>
+				<div class="arch-row">
+					<div class="arch-node">SpringBoot API</div>
+					<div class="arch-arrow">--&gt;</div>
+					<div class="arch-node">HyPE</div>
+				</div>
+				<div class="arch-row">
+					<div class="arch-node">HyPE</div>
+					<div class="arch-arrow">--&gt;</div>
+					<div class="arch-node">RAG Engine</div>
+				</div>
+				<div class="arch-row">
+					<div class="arch-node">LangGraph Orchestration</div>
+					<div class="arch-arrow">--&gt;</div>
+					<div class="arch-node">RAG Engine</div>
+				</div>
+				<div class="arch-row">
+					<div class="arch-node">RAG Engine</div>
+					<div class="arch-arrow">--&gt;</div>
+					<div class="arch-node">Vector DB</div>
+				</div>
+			</div>
+
 			<h3>RAG Tool</h3>
 			<ul>
 				<li>
