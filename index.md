@@ -89,6 +89,12 @@ hide_sidebar: true
 		font-size: 1.1rem;
 	}
 
+	.project-right h4 {
+		margin-top: 0;
+		margin-bottom: 0.35rem;
+		color: #204564;
+	}
+
 	.arch-diagram {
 		border: 1px solid #d3e3f1;
 		border-radius: 8px;
@@ -204,9 +210,9 @@ hide_sidebar: true
 			<div class="project-shot">
 				<img src="{{ '/assets/img/neutrino-chatbot-screenshot.png' | relative_url }}" alt="Neutrino chatbot screenshot" onerror="this.style.display='none'" />
 			</div>
-            <h4>AI Techniques</h4>
+            <b>AI Techniques</b>
             <p>
-                <strong>RAG</strong> technique along with <strong>React</strong> technique and <strong>Semantic Chunking</strong> for generating accurate and relevant <strong>content</strong>.
+                <strong>RAG</strong> along with <strong>React</strong>, and <strong>Semantic Chunking</strong> have been used for generating accurate and relevant <strong>content</strong>.
             </p>
 			<div class="project-links">
             Hosted Link: 
@@ -215,15 +221,15 @@ hide_sidebar: true
 		</div>
 
 		<div class="project-right">
-            <h4>Key Metrics</h4>             
+            <b>Key Metrics</b>             
             <p>
                 Groundedness score, precision <strong>score</strong> to validate response.  
             </p>               
-            <h4>Chunking Strategy</h4>
+            <b>Chunking Strategy</b>
             <p>
             LamaParse is used to generate chunks as part of chunking strategy.
             </p>        
-			<h4>RAG Flow</h4>
+			<b>RAG Flow</b>
 			<ul>
 				<li>
 					For a given user query, the system generates HyPE questions. It uses these questions to identify relevant <strong>context</strong> from the <strong>vector store</strong>.
@@ -233,7 +239,7 @@ hide_sidebar: true
 				</li>
 			</ul>  
 
-			<h4>Arch Overview</h4>
+			<b>Architecture Overview</b>
 
             <div class="arch-diagram arch-diagram-compact">
                 <div class="arch-layer">Angular</div>
@@ -264,6 +270,14 @@ hide_sidebar: true
 			<div class="project-shot" style="margin-top:0.9rem;">
 				<img src="{{ '/assets/img/appointment-bot-screenshot.png' | relative_url }}" alt="Appointment Bot screenshot" onerror="this.style.display='none'" />
 			</div>
+			<b>AI Techniques</b>
+            <p>
+                <strong>Dialog Flow</strong> along with <strong>MCP Server</strong>, and <strong>RAG</strong> have been used for the conversation  <strong>flow</strong>.
+            </p>
+			<div class="project-links">
+            Hosted Link: 
+				<a href="http://52.172.90.251:5050/" target="_blank" rel="noopener noreferrer">RASAPRO Solution</a>
+			</div>
 		</div>
 
 		<div class="project-right">
@@ -285,6 +299,8 @@ hide_sidebar: true
 				<div class="arch-layer">MCP Server &nbsp;·&nbsp; API Integration</div>
                 <div class="arch-layer">MCP Server &nbsp;·&nbsp; RAG Search</div>
 			</div>
+
+
 		</div>
 	</article>
 </section>
