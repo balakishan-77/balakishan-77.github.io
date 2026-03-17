@@ -160,14 +160,6 @@ hide_sidebar: true
 		box-shadow: 0 2px 8px rgba(18, 44, 68, 0.12);
 	}
 
-	.project-row-architecture-right .project-left {
-		order: 0;
-	}
-
-	.project-row-architecture-right .project-right {
-		order: 1;
-	}
-
 	@media (max-width: 900px) {
 		body {
 			padding: 16px;
@@ -222,14 +214,6 @@ hide_sidebar: true
 		</div>
 
 		<div class="project-right">
-			<p>
-				The <strong>Presentation layer</strong> uses Angular framework
-				to capture user input and render responses while connecting to Spring Boot based Backend REST API layer. 
-			</p>
-			<p>            
-                The <strong>RAG engine layer</strong> combines Prompt Engineering, RAG, HyPE technique, React agent, Open API, and LangGraph which coordinates retrieval and answer generation workflows.                  
-            </p>
-
 			<h3>RAG Flow</h3>
 			<ul>
 				<li>
@@ -241,7 +225,15 @@ hide_sidebar: true
 				<li>
 					Calculates groundedness and precision <strong>scores</strong> of the response. Repeats the process up to a predefined <strong>max</strong> iteration count when scores are low.
 				</li>
-			</ul>   
+			</ul>  
+            <h3>Architecture Overview</h3> 
+			<p>
+				The <strong>Presentation layer</strong> uses Angular framework
+				to capture user input and render responses while connecting to Spring Boot based Backend REST API layer. 
+			</p>
+			<p>            
+                The <strong>RAG engine layer</strong> combines Prompt Engineering, RAG, HyPE technique, React agent, Open API, and LangGraph which coordinates retrieval and answer generation workflows.                  
+            </p>            
 
 			<div class="arch-diagram arch-diagram-compact">
 				<div class="arch-layer">Angular</div>
@@ -257,16 +249,14 @@ hide_sidebar: true
         
 	</article>
 
-	<article class="project-row project-row-architecture-right">
+	<article class="project-row">
 		<div class="project-left">
-			<h3>Architecture</h3>
-			<div class="arch-diagram">
-				<div class="arch-layer">React / Web Chat</div>
-				<div class="arch-layer">RASA NLU</div>
-				<div class="arch-layer">RASA Core</div>
-				<div class="arch-layer">OTP Auth &nbsp;·&nbsp; Session Management</div>
-				<div class="arch-layer">Custom Actions API &nbsp;·&nbsp; Appointment DB</div>
-			</div>
+			<h2>RASA Appointment Bot</h2>
+			<p>
+				A conversational appointment management assistant built with <strong>RASAPRO</strong>. Users
+				authenticate via <strong>OTP</strong>, view their profile, browse available doctors,
+				and book, view, or cancel appointments through a natural language interface.
+			</p>
 
 			<div class="project-shot" style="margin-top:0.9rem;">
 				<img src="{{ '/assets/img/appointment-bot-screenshot.png' | relative_url }}" alt="Appointment Bot screenshot" onerror="this.style.display='none'" />
@@ -274,21 +264,23 @@ hide_sidebar: true
 		</div>
 
 		<div class="project-right">
-			<h2 style="margin-top:0;">RASA Appointment Bot</h2>
-			<p>
-				A conversational appointment management assistant built with <strong>RASAPRO</strong>. Users
-				 authenticate via <strong>OTP</strong>, view their profile, browse available doctors,
-				and book, view, or cancel appointments — all through a natural language interface.
-			</p>
-
 			<h3>Key Features</h3>
 			<ul>
 				<li>OTP-based email authentication with session management.</li>
-                <li>Configurable dialog flows which guide user's converation</li>
-				<li>RAG based search for doctor speciality
+				<li>Configurable dialog flows that guide user conversations.</li>
+				<li>RAG-based search for doctor specialties.</li>
                 <li>MCP server to integrate with external system for appointment booking with available doctors by specialty.</li>
 				<li>Persistent session context across the conversation.</li>
 			</ul>
+
+			<h3>Architecture</h3>
+			<div class="arch-diagram arch-diagram-compact">
+				<div class="arch-layer">React / Web Chat</div>
+				<div class="arch-layer">RASA NLU</div>
+				<div class="arch-layer">RASA Core</div>
+				<div class="arch-layer">OTP Auth &nbsp;·&nbsp; Session Management</div>
+				<div class="arch-layer">Custom Actions API &nbsp;·&nbsp; Appointment DB</div>
+			</div>
 		</div>
 	</article>
 </section>
