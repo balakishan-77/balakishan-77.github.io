@@ -25,7 +25,7 @@ The assistant generates response taking **historical** interaction into account 
 
 *   This architecture of the solution is not coupled to python or streamlit
 *   The solution has been ported to SpringBoot and Angular.
-*   [Link to SpringBoot Solution](http://74.224.124.209:4200/home).
+*   [Link to SpringBoot Solution](http://52.140.124.205:4200/home).
 *   **SpringBoot** takes the place of python and leverages langgraph4j
 *   **Angular takes** the place of streamlit
 *   This architecture can be implemented in other technologies like **golang** as well where langgraph is supported
