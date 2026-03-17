@@ -177,18 +177,6 @@ hide_sidebar: true
 		box-shadow: 0 2px 8px rgba(18, 44, 68, 0.12);
 	}
 
-	.project-row-reversed {
-		grid-template-columns: 1fr 1fr;
-	}
-
-	.project-row-reversed .project-left {
-		order: 1;
-	}
-
-	.project-row-reversed .project-right {
-		order: 0;
-	}
-
 	@media (max-width: 900px) {
 		body {
 			padding: 16px;
@@ -277,7 +265,7 @@ hide_sidebar: true
 
                 The <strong>RAG engine layer</strong>
 				combines LangGraph orchestration, HyPE, Open API, and a React agent to coordinate retrieval and answer generation workflows.                              
-                
+
                 The <strong>Vector DB layer</strong> uses Chroma DB to ingest both domain content as HyPE generated questions.
 			</p>
 
@@ -301,7 +289,7 @@ hide_sidebar: true
 		</div>
 	</article>
 
-	<article class="project-row project-row-reversed">
+	<article class="project-row">
 		<div class="project-left">
 			<h3>Architecture</h3>
 			<div class="arch-diagram">
