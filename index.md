@@ -1,14 +1,43 @@
 ---
 layout: default
+hide_sidebar: true
 ---
 
 <style>
+	body {
+		padding: 28px;
+	}
+
+	.wrapper {
+		width: min(1120px, 100%);
+		margin: 0 auto;
+	}
+
+	section {
+		width: auto;
+		float: none;
+		padding-bottom: 24px;
+	}
+
 	.ai-projects-banner {
 		margin: 0 0 1.5rem;
 		padding: 1.2rem 1.4rem;
 		border-left: 6px solid #2f79b7;
 		background: linear-gradient(120deg, #eef6fc 0%, #f7fbff 100%);
 		border-radius: 8px;
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.ai-projects-banner img {
+		width: 120px;
+		height: 120px;
+		object-fit: cover;
+		border-radius: 8px;
+		border: 1px solid #bcd3e7;
+		box-shadow: 0 2px 8px rgba(18, 44, 68, 0.12);
+		flex-shrink: 0;
 	}
 
 	.ai-projects-banner h1 {
@@ -73,6 +102,20 @@ layout: default
 	}
 
 	@media (max-width: 900px) {
+		body {
+			padding: 16px;
+		}
+
+		.ai-projects-banner {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		.ai-projects-banner img {
+			width: 96px;
+			height: 96px;
+		}
+
 		.project-row {
 			min-height: auto;
 			grid-template-columns: 1fr;
@@ -81,10 +124,13 @@ layout: default
 </style>
 
 <section class="ai-projects-banner">
-	<h1>AI Projects</h1>
-	<p>
-		This page showcases my AI projects, including architecture, tools, and implementation details.
-	</p>
+	<img src="{{ site.logo | relative_url }}" alt="AI at Work" />
+	<div>
+		<h1>AI Projects</h1>
+		<p>
+			This page showcases my AI projects, including architecture, tools, and implementation details.
+		</p>
+	</div>
 </section>
 
 <section class="projects-list">
