@@ -97,6 +97,13 @@ hide_sidebar: true
 		margin-bottom: 0.9rem;
 	}
 
+	.arch-diagram-compact {
+		max-width: 380px;
+		padding: 0.45rem;
+		margin-top: 0.7rem;
+		margin-bottom: 0;
+	}
+
 	.arch-layer {
 		padding: 0.38rem 0.6rem;
 		border-radius: 5px;
@@ -119,6 +126,12 @@ hide_sidebar: true
 	.arch-layer:nth-child(even) {
 		background: #f0f8ff;
 		border: 1px solid #c5d9ea;
+	}
+
+	.arch-diagram-compact .arch-layer {
+		padding: 0.28rem 0.45rem;
+		font-size: 0.8rem;
+		margin-bottom: 0.2rem;
 	}
 
 	.project-right ul {
@@ -206,18 +219,16 @@ hide_sidebar: true
 			<div class="project-links">
 				<a href="http://52.140.124.205:4200/home" target="_blank" rel="noopener noreferrer">SpringBoot Solution</a>
 			</div>
-		</div>
 
-		<div class="project-right">
-			<h3>Architecture Overview</h3>
-			<div class="arch-diagram">
+			<div class="arch-diagram arch-diagram-compact">
 				<div class="arch-layer">Angular</div>
 				<div class="arch-layer">Spring Boot</div>
 				<div class="arch-layer">RAG - LangGraph&nbsp;·&nbsp;HyPE &nbsp;·&nbsp; Open API &nbsp;·&nbsp; React</div>
 				<div class="arch-layer">Vector Database - Chroma DB</div>
 			</div>
+		</div>
 
-
+		<div class="project-right">
 			<p>
 				The <strong>Presentation layer</strong> is based Angular
 				to capture user input and render responses while connecting to Spring Boot based Backend REST API layer. 
