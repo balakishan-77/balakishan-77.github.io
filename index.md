@@ -268,7 +268,20 @@ hide_sidebar: true
 				</div>
 			</div>
 
-			<h3>RAG Tool</h3>
+
+
+			<h3 style="margin-top: 0.9rem;">Architecture Description</h3>
+			<p>
+				The <strong>UI layer</strong> uses Angular
+				to capture user input and render responses while conntecint to Backend REST API layer</strong> which runs on SpringBoot. 
+
+                The <strong>RAG engine layer</strong>
+				combines LangGraph orchestration, HyPE, Open API, and a React agent to coordinate retrieval and answer generation workflows.                              
+                
+                The <strong>Vector DB layer</strong> uses Chroma DB to ingest both domain content as HyPE generated questions.
+			</p>
+
+			<h3>RAG Tool Flow</h3>
 			<ul>
 				<li>
 					Generates hypothetical questions from the user query and retrieves
@@ -283,20 +296,8 @@ hide_sidebar: true
 				<li>
 					Repeats the process up to a predefined <strong>max</strong> iteration count when scores are low.
 				</li>
-				<li>
-					Uses langgraph for <strong>reflective</strong> agent execution to improve response quality.
-				</li>
-			</ul>
 
-			<h3 style="margin-top: 0.9rem;">Architecture Description</h3>
-			<p>
-				The architecture is organized in four layers. The <strong>UI layer</strong> uses Angular
-				to capture user input and render responses. The <strong>REST API layer</strong> uses Spring
-				Boot to handle requests and orchestrate backend processing. The <strong>RAG engine layer</strong>
-				combines LangGraph orchestration, HyPE, Open API, and a React agent to coordinate retrieval
-				and answer generation workflows. The <strong>Vector DB layer</strong> uses Chroma DB to store
-				and retrieve semantic context for grounding responses.
-			</p>
+			</ul>            
 		</div>
 	</article>
 
