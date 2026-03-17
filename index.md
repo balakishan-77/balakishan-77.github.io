@@ -226,7 +226,7 @@ hide_sidebar: true
 			</div>
 
 			<div class="project-links">
-				<a href="http://52.140.124.205:4200/home">SpringBoot Solution</a>
+				<a href="http://52.140.124.205:4200/home" target="_blank" rel="noopener noreferrer">SpringBoot Solution</a>
 			</div>
 		</div>
 
@@ -276,14 +276,15 @@ hide_sidebar: true
 				</li>
 			</ul>
 
-			<h3 style="margin-top: 0.9rem;">Porting The Solution</h3>
-			<ul>
-				<li>This architecture is not coupled to Python or Streamlit.</li>
-				<li>The solution has been ported to SpringBoot and Angular.</li>
-				<li><strong>SpringBoot</strong> takes the place of Python and leverages langgraph4j.</li>
-				<li><strong>Angular</strong> takes the place of Streamlit.</li>
-				<li>This can also be implemented in technologies like <strong>Golang</strong> where langgraph is supported.</li>
-			</ul>
+			<h3 style="margin-top: 0.9rem;">Architecture Description</h3>
+			<p>
+				The architecture is organized in four layers. The <strong>UI layer</strong> uses Angular
+				to capture user input and render responses. The <strong>REST API layer</strong> uses Spring
+				Boot to handle requests and orchestrate backend processing. The <strong>RAG engine layer</strong>
+				combines LangGraph orchestration, HyPE, Open API, and a React agent to coordinate retrieval
+				and answer generation workflows. The <strong>Vector DB layer</strong> uses Chroma DB to store
+				and retrieve semantic context for grounding responses.
+			</p>
 		</div>
 	</article>
 </section>
