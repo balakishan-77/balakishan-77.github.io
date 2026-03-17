@@ -136,21 +136,16 @@ hide_sidebar: true
 <section class="projects-list">
 	<article class="project-row">
 		<div class="project-left">
-			<h2>Neutrino</h2>
+			<h2>Neutrino Assistant</h2>
 			<p>
 				Neutrino is a nutrition assistant based on <strong>RAG</strong>,
-				<strong>reflection</strong> and the <strong>langgraph</strong> agentic framework.
-			</p>
-
-			<h3>Assistant</h3>
-			<p>
-				The assistant generates responses by taking <strong>historical</strong> interactions
-				into account and asks <strong>clarifications</strong> when needed. It leverages an
-				agentic <strong>RAG</strong> tool for generating accurate <strong>content</strong>.
+				<strong>reflection</strong> and the <strong>langgraph</strong> agentic framework. The
+				assistant generates responses by taking <strong>historical</strong> interactions into
+				account and asks <strong>clarifications</strong> when needed. It leverages an agentic
+				<strong>RAG</strong> tool for generating accurate <strong>content</strong>.
 			</p>
 
 			<div class="project-links">
-				<a href="https://huggingface.co/spaces/balakishan77/hf">Hugging Face Space</a>
 				<a href="http://52.140.124.205:4200/home">SpringBoot Solution</a>
 			</div>
 		</div>
