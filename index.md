@@ -197,54 +197,57 @@ hide_sidebar: true
 		<div class="project-left">
 			<h2>Neutrino Assistant</h2>
 			<p>
-				Neutrino is a nutrition assistant based on <strong>RAG</strong>,
-				<strong>reflection</strong> and the <strong>langgraph</strong> agentic framework. The
-				assistant generates responses by taking <strong>historical</strong> interactions into
-				account and asks <strong>clarifications</strong> when needed. It leverages an agentic
-				<strong>RAG</strong> tool for generating accurate <strong>content</strong>.
+				Neutrino is a <strong>RAG</strong> based <strong>Agentic</strong> AI system which provides nutrition assistance and generates responses by taking <strong>historical</strong> interactions into
+				account. The system asks for <strong>clarifications</strong> when needed. 
 			</p>
 
 			<div class="project-shot">
 				<img src="{{ '/assets/img/neutrino-chatbot-screenshot.png' | relative_url }}" alt="Neutrino chatbot screenshot" onerror="this.style.display='none'" />
 			</div>
-
+            <h4>AI Techniques</h4>
+            <p>
+                <strong>RAG</strong> technique along with <strong>React</strong> technique and <strong>Semantic Chunking</strong> for generating accurate and relevant <strong>content</strong>.
+            </p>
 			<div class="project-links">
+            Hosted Link: 
 				<a href="http://52.140.124.205:4200/home" target="_blank" rel="noopener noreferrer">SpringBoot Solution</a>
 			</div>
 		</div>
 
 		<div class="project-right">
-			<h3>RAG Flow</h3>
+            <h4>Key Metrics</h4>             
+            <p>
+                Groundedness score, precision <strong>score</strong> to validate response.  
+            </p>               
+            <h4>Chunking Strategy</h4>
+            <p>
+            LamaParse is used to generate chunks as part of chunking strategy.
+            </p>        
+			<h4>RAG Flow</h4>
 			<ul>
 				<li>
-					For the user query, generates hypothetical questions based on HyPE technique. Uses these questions to identify relevant <strong>context</strong> from the <strong>vector store</strong>.
+					For a given user query, the system generates HyPE questions. It uses these questions to identify relevant <strong>context</strong> from the <strong>vector store</strong>.
 				</li>
 				<li>
-					Sends the user query, retrieved context to the <strong>LLM</strong> for response generation.
-				</li>
-				<li>
-					Calculates groundedness and precision <strong>scores</strong> of the response. Repeats the process up to a predefined <strong>max</strong> iteration count when scores are low.
+					The system sends the user query along with retrieved context to Open AI <strong>LLM</strong> for response generation.
 				</li>
 			</ul>  
-            <h3>Architecture Overview</h3> 
-			<p>
-				The <strong>Presentation layer</strong> uses Angular framework
-				to capture user input and render responses while connecting to Spring Boot based Backend REST API layer. 
-			</p>
-			<p>            
-                The <strong>RAG engine layer</strong> combines Prompt Engineering, RAG, HyPE technique, React agent, Open API, and LangGraph which coordinates retrieval and answer generation workflows.                  
-            </p>            
 
-			<div class="arch-diagram arch-diagram-compact">
-				<div class="arch-layer">Angular</div>
-				<div class="arch-layer">Spring Boot</div>
-				<div class="arch-layer">RAG - LangGraph&nbsp;·&nbsp;HyPE &nbsp;·&nbsp; Open API &nbsp;·&nbsp; React</div>
-				<div class="arch-layer">Vector Database - Chroma DB</div>
-			</div>
-		
+			<h4>Arch Overview</h4>
+
+            <div class="arch-diagram arch-diagram-compact">
+                <div class="arch-layer">Angular</div>
+                <div class="arch-layer">Spring Boot</div>
+                <div class="arch-layer">RAG Layer - LangGraph&nbsp;·&nbsp;HyPE &nbsp;·&nbsp; Open API &nbsp;·&nbsp; React</div>
+                <div class="arch-layer">Chroma Vector DB</div>
+            </div>
+
             <p>
-                LamaParse has been used as part of chunking strategy to generated semantic chunks and ingest the resulting embeddings into  Chroma DB. LLM is used to generate HyPE questions.
-            </p>
+                The <strong>RAG layer</strong> combines Prompt Engineering, RAG, HyPE technique, React, Open API, and LangGraph Orchestration framework which coordinates retrieval and answer generation. 
+            </p>  
+
+
+  
         </div>
         
 	</article>
@@ -253,10 +256,10 @@ hide_sidebar: true
 		<div class="project-left">
 			<h2>RASA Appointment Bot</h2>
 			<p>
-				A conversational appointment management assistant built with <strong>RASAPRO</strong>. Users
-				authenticate via <strong>OTP</strong>, view their profile, browse available doctors,
-				and book, view, or cancel appointments through a natural language interface.
+				A conversational appointment management assistant built with <strong>RASAPRO</strong>. 
 			</p>
+            Users authenticate via <strong>OTP</strong>, view their profile, browse available doctors,
+			and book, view, or cancel appointments through a natural language interface.
 
 			<div class="project-shot" style="margin-top:0.9rem;">
 				<img src="{{ '/assets/img/appointment-bot-screenshot.png' | relative_url }}" alt="Appointment Bot screenshot" onerror="this.style.display='none'" />
@@ -264,7 +267,7 @@ hide_sidebar: true
 		</div>
 
 		<div class="project-right">
-			<h3>Key Features</h3>
+			<h4>Key Features</h4>
 			<ul>
 				<li>OTP-based email authentication with session management.</li>
 				<li>Configurable dialog flows that guide user conversations.</li>
@@ -273,13 +276,14 @@ hide_sidebar: true
 				<li>Persistent session context across the conversation.</li>
 			</ul>
 
-			<h3>Architecture</h3>
+			<h4>Architecture Overview</h4>
 			<div class="arch-diagram arch-diagram-compact">
-				<div class="arch-layer">React / Web Chat</div>
-				<div class="arch-layer">RASA NLU</div>
-				<div class="arch-layer">RASA Core</div>
-				<div class="arch-layer">OTP Auth &nbsp;·&nbsp; Session Management</div>
-				<div class="arch-layer">Custom Actions API &nbsp;·&nbsp; Appointment DB</div>
+				<div class="arch-layer">StreamLit</div>
+				<div class="arch-layer">RASA Server</div>
+				<div class="arch-layer">RASA PRO (CALM)</div>
+                <div class="arch-layer">Custom Actions &nbsp;·&nbsp; OTP Auth &nbsp;·&nbsp;Session Management</div>
+				<div class="arch-layer">MCP Server &nbsp;·&nbsp; API Integration</div>
+                <div class="arch-layer">MCP Server &nbsp;·&nbsp; RAG Search</div>
 			</div>
 		</div>
 	</article>
