@@ -147,6 +147,14 @@ hide_sidebar: true
 		box-shadow: 0 2px 8px rgba(18, 44, 68, 0.12);
 	}
 
+	.project-row-architecture-right .project-left {
+		order: 0;
+	}
+
+	.project-row-architecture-right .project-right {
+		order: 1;
+	}
+
 	@media (max-width: 900px) {
 		body {
 			padding: 16px;
@@ -205,40 +213,38 @@ hide_sidebar: true
 			<div class="arch-diagram">
 				<div class="arch-layer">Angular</div>
 				<div class="arch-layer">Spring Boot</div>
-				<div class="arch-layer">LangGraph Orchestration</div>
-				<div class="arch-layer">HyPE &nbsp;·&nbsp; Open API &nbsp;·&nbsp; React Agent</div>
-				<div class="arch-layer">Chroma DB</div>
+				<div class="arch-layer">RAG - LangGraph&nbsp;·&nbsp;HyPE &nbsp;·&nbsp; Open API &nbsp;·&nbsp; React</div>
+				<div class="arch-layer">Vector Database - Chroma DB</div>
 			</div>
-
 
 
 			<p>
 				The <strong>Presentation layer</strong> is based Angular
 				to capture user input and render responses while connecting to Spring Boot based Backend REST API layer. 
 
-                The <strong>RAG engine layer</strong> combines LangGraph orchestration, HyPE, Open API, and a React agent to coordinate retrieval and answer generation workflows.                              
+                The <strong>RAG engine layer</strong> combines HyPE technique, React agent, Open API to coordinate retrieval and answer generation workflows.                              
 
 			</p>
 
-			<h3>RAG Tool Flow</h3>
+			<h3>RAG Tool</h3>
 			<ul>
 				<li>
-					Generates hypothetical questions from the user query and retrieves
-					<strong>context</strong> from a <strong>vector store</strong>.
+					Generates hypothetical questions based on HyPE technique from the user query and retrieves <strong>context</strong> from the <strong>vector store</strong>.
 				</li>
 				<li>
-					Sends the user query and retrieved context to the <strong>LLM</strong> for response generation.
+					Sends the user query, retrieved context to the <strong>LLM</strong> for response generation.
 				</li>
 				<li>
-					Calculates groundedness and precision <strong>scores</strong> for the response. Repeats the process up to a predefined <strong>max</strong> iteration count when scores are low.
+					Calculates groundedness and precision <strong>scores</strong> of the response. Repeats the process up to a predefined <strong>max</strong> iteration count when scores are low.
 				</li>
 			</ul>   
-            <h3>Ingestion Flow</h3>         
-                The <strong>Vector DB layer</strong> uses Chroma DB to ingest both domain content as well as HyPE generated questions.
+            <p>
+                LamaParse has been used as part of chunking strategy to generated semantic chunks and ingest the resulting embeddings into  Chroma DB. LLM has been used to generate HyPE questions.
+            </p>
 		</div>
 	</article>
 
-	<article class="project-row">
+	<article class="project-row project-row-architecture-right">
 		<div class="project-left">
 			<h3>Architecture</h3>
 			<div class="arch-diagram">
@@ -257,17 +263,17 @@ hide_sidebar: true
 		<div class="project-right">
 			<h2 style="margin-top:0;">RASA Appointment Bot</h2>
 			<p>
-				A conversational appointment management assistant built with <strong>RASA</strong>. Users
-				can authenticate via <strong>OTP</strong>, view their profile, browse available doctors,
+				A conversational appointment management assistant built with <strong>RASAPRO</strong>. Users
+				 authenticate via <strong>OTP</strong>, view their profile, browse available doctors,
 				and book, view, or cancel appointments — all through a natural language interface.
 			</p>
 
 			<h3>Key Features</h3>
 			<ul>
 				<li>OTP-based email authentication with session management.</li>
-				<li>Books appointments with available doctors by specialty.</li>
-				<li>View and cancel existing appointments.</li>
-				<li>Quick command shortcuts for common actions.</li>
+                <li>Configurable dialog flows which guide user's converation</li>
+				<li>RAG based search for doctor speciality
+                <li>MCP server to integrate with external system for appointment booking with available doctors by specialty.</li>
 				<li>Persistent session context across the conversation.</li>
 			</ul>
 		</div>
