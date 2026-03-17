@@ -98,57 +98,27 @@ hide_sidebar: true
 	}
 
 	.arch-layer {
-		display: grid;
-		grid-template-columns: 130px 1fr;
-		gap: 0.55rem;
-		align-items: center;
-		margin-bottom: 0.5rem;
+		padding: 0.38rem 0.6rem;
+		border-radius: 5px;
+		margin-bottom: 0.28rem;
+		font-size: 0.88rem;
+		font-weight: 600;
+		color: #16334b;
+		text-align: center;
 	}
 
 	.arch-layer:last-child {
 		margin-bottom: 0;
 	}
 
-	.arch-label {
-		font-size: 0.79rem;
-		font-weight: 700;
-		color: #315974;
-		text-transform: uppercase;
-		letter-spacing: 0.03em;
+	.arch-layer:nth-child(odd) {
+		background: #ddeeff;
+		border: 1px solid #a8c8e4;
 	}
 
-	.arch-node {
-		padding: 0.32rem 0.48rem;
-		border: 1px solid #b9d2e7;
-		border-radius: 6px;
-		background: #ffffff;
-		color: #16334b;
-		font-size: 0.9rem;
-		font-weight: 600;
-		text-align: center;
-	}
-
-	.arch-node-main {
-		background: #edf6ff;
-	}
-
-	.arch-node-sub {
-		margin-top: 0.32rem;
-		font-size: 0.83rem;
-		font-weight: 600;
-		color: #315974;
-		text-align: center;
-	}
-
-	@media (max-width: 1100px) {
-		.arch-layer {
-			grid-template-columns: 1fr;
-			gap: 0.3rem;
-		}
-
-		.arch-label {
-			font-size: 0.75rem;
-		}
+	.arch-layer:nth-child(even) {
+		background: #f0f8ff;
+		border: 1px solid #c5d9ea;
 	}
 
 	.project-right ul {
@@ -231,42 +201,23 @@ hide_sidebar: true
 		</div>
 
 		<div class="project-right">
-			<h3>Architecture</h3>
+			<h3>Architecture Overview</h3>
 			<div class="arch-diagram">
-				<div class="arch-layer">
-					<div class="arch-label">Layer 1: UI</div>
-					<div class="arch-node arch-node-main">Angular</div>
-				</div>
-				<div class="arch-layer">
-					<div class="arch-label">Layer 2: REST API</div>
-					<div class="arch-node arch-node-main">Spring Boot</div>
-				</div>
-				<div class="arch-layer">
-					<div class="arch-label">Layer 3: RAG Engine</div>
-					<div>
-						<div class="arch-node arch-node-main">LangGraph Orchestration</div>
-						<div class="arch-node-sub">HyPE</div>
-						<div class="arch-node-sub">Open API</div>
-						<div class="arch-node-sub">React Agent</div>
-					</div>
-				</div>
-				<div class="arch-layer">
-					<div class="arch-label">Layer 4: Vector DB</div>
-					<div class="arch-node arch-node-main">Chroma DB</div>
-				</div>
+				<div class="arch-layer">Angular</div>
+				<div class="arch-layer">Spring Boot</div>
+				<div class="arch-layer">LangGraph Orchestration</div>
+				<div class="arch-layer">HyPE &nbsp;·&nbsp; Open API &nbsp;·&nbsp; React Agent</div>
+				<div class="arch-layer">Chroma DB</div>
 			</div>
 
 
 
-			<h3 style="margin-top: 0.9rem;">Architecture Description</h3>
 			<p>
-				The <strong>UI layer</strong> uses Angular
-				to capture user input and render responses while conntecint to Backend REST API layer</strong> which runs on SpringBoot. 
+				The <strong>Presentation layer</strong> is based Angular
+				to capture user input and render responses while connecting to Spring Boot based Backend REST API layer. 
 
-                The <strong>RAG engine layer</strong>
-				combines LangGraph orchestration, HyPE, Open API, and a React agent to coordinate retrieval and answer generation workflows.                              
+                The <strong>RAG engine layer</strong> combines LangGraph orchestration, HyPE, Open API, and a React agent to coordinate retrieval and answer generation workflows.                              
 
-                The <strong>Vector DB layer</strong> uses Chroma DB to ingest both domain content as HyPE generated questions.
 			</p>
 
 			<h3>RAG Tool Flow</h3>
@@ -279,13 +230,11 @@ hide_sidebar: true
 					Sends the user query and retrieved context to the <strong>LLM</strong> for response generation.
 				</li>
 				<li>
-					Calculates groundedness and precision <strong>scores</strong> for the response.
+					Calculates groundedness and precision <strong>scores</strong> for the response. Repeats the process up to a predefined <strong>max</strong> iteration count when scores are low.
 				</li>
-				<li>
-					Repeats the process up to a predefined <strong>max</strong> iteration count when scores are low.
-				</li>
-
-			</ul>            
+			</ul>   
+            <h3>Ingestion Flow</h3>         
+                The <strong>Vector DB layer</strong> uses Chroma DB to ingest both domain content as well as HyPE generated questions.
 		</div>
 	</article>
 
@@ -293,29 +242,11 @@ hide_sidebar: true
 		<div class="project-left">
 			<h3>Architecture</h3>
 			<div class="arch-diagram">
-				<div class="arch-layer">
-					<div class="arch-label">Layer 1: UI</div>
-					<div class="arch-node arch-node-main">React / Web Chat</div>
-				</div>
-				<div class="arch-layer">
-					<div class="arch-label">Layer 2: NLU</div>
-					<div class="arch-node arch-node-main">RASA NLU</div>
-				</div>
-				<div class="arch-layer">
-					<div class="arch-label">Layer 3: Dialogue</div>
-					<div>
-						<div class="arch-node arch-node-main">RASA Core</div>
-						<div class="arch-node-sub">OTP Auth</div>
-						<div class="arch-node-sub">Session Management</div>
-					</div>
-				</div>
-				<div class="arch-layer">
-					<div class="arch-label">Layer 4: Backend</div>
-					<div>
-						<div class="arch-node arch-node-main">Custom Actions API</div>
-						<div class="arch-node-sub">Appointment DB</div>
-					</div>
-				</div>
+				<div class="arch-layer">React / Web Chat</div>
+				<div class="arch-layer">RASA NLU</div>
+				<div class="arch-layer">RASA Core</div>
+				<div class="arch-layer">OTP Auth &nbsp;·&nbsp; Session Management</div>
+				<div class="arch-layer">Custom Actions API &nbsp;·&nbsp; Appointment DB</div>
 			</div>
 
 			<div class="project-shot" style="margin-top:0.9rem;">
