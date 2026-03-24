@@ -1,0 +1,40 @@
+:root {
+  --gradient-start: #f5f7fa;
+  --gradient-end: #e6f4ff;
+  --card-shadow: 0 1rem 2.5rem rgba(15, 23, 42, 0.15);
+}
+
+body {
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  background: var(--gradient-start);
+  margin: 0;
+}
+
+.bg-gradient {
+  background: radial-gradient(circle at top right, #e0f3ff, transparent 45%), linear-gradient(135deg, #fefefe, #f1f5ff);
+  position: relative;
+}
+
+.card {
+  border-radius: 1.1rem;
+  box-shadow: var(--card-shadow);
+}
+
+.badge {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+}
+
+.form-control {
+  border-radius: 0.75rem;
+  padding: 0.85rem 1rem;
+}
+
+.btn {
+  border-radius: 0.85rem;
+}
+
+ul li i {
+  font-size: 1rem;
+}
+

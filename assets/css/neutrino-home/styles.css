@@ -1,0 +1,89 @@
+:root {
+  --primary: #1b6afc;
+  --card-bg: rgba(255, 255, 255, 0.95);
+  --border-soft: rgba(15, 23, 42, 0.08);
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  background-color: #f3f6ff;
+}
+
+.bg-home {
+  background: radial-gradient(circle at top left, rgba(27, 106, 252, 0.18), transparent 40%), linear-gradient(180deg, #ffffff 0%, #edf4ff 100%);
+}
+
+.card.chat-card {
+  border-radius: 32px;
+  background: var(--card-bg);
+}
+
+.user-bubble p {
+  max-width: 320px;
+  font-size: 0.95rem;
+}
+
+.assistant-bubble p {
+  max-width: 640px;
+  font-size: 1rem;
+  color: #202020;
+}
+
+.input-group {
+  background: #fff;
+}
+
+.input-group .form-control {
+  background: transparent;
+  font-size: 1rem;
+  min-height: 60px;
+}
+
+.input-group .btn {
+  border-radius: 0 1.5rem 1.5rem 0;
+  min-height: 60px;
+}
+
+.info-card {
+  background: #fff;
+  border-color: var(--border-soft);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.09);
+}
+
+.info-card i {
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+@media (max-width: 576px) {
+  .chat-card .card-body {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .input-group {
+    flex-direction: column;
+    border-radius: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .input-group .form-control, .input-group .btn {
+    width: 100%;
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .input-group .btn {
+    border-top: 1px solid var(--border-soft);
+  }
+}
+
