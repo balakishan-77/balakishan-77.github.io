@@ -276,7 +276,7 @@ hide_sidebar: true
             </p>
 			<div class="project-links">
             Hosted Link: 
-				<a href="http://52.172.90.251:5050/" target="_blank" rel="noopener noreferrer">RASAPRO Solution</a>
+				<a href="http://52.140.124.205:5050/" target="_blank" rel="noopener noreferrer">RASAPRO Solution</a>
 			</div>
 		</div>
 
